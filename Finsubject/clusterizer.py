@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import os 
 
 #change into the directory where the results are stored
-result_dir = 'C:\\Subpbiotech_cours\\BT4\\Stage_MNHN\\SOA_nanopore\\approfondissement\\Sample_type_analysis\\Test_topic_clustering\\clustering_abstract\\Trial_2_categories\\results_IE\\'
+result_dir = 'C:\\PATH\\TO\\RESULTS\\DIRECTORY'
 os.chdir(result_dir)
 
 #Variable initialization
