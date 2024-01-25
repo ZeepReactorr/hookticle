@@ -95,4 +95,4 @@ def sci(keywords, limite):
 
     return True
     
-print(sci(['materia_1', 'material_2', 'material_3'], 1000))
+print(sci(['material_1', 'material_2', 'material_3'], 1000))
