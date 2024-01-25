@@ -6,41 +6,43 @@ import os
 #change into the desired directory to store the results of the sorting
 os.chdir('C:\\PATH\\TO\\DESIRED\\DIRECTORY')
 
-def sci(url, keywords, pure_url, coefficient, sci_url, ru_url, limite):
-    Searched_material = 0
+def sci(keywords, limite):
+    #initialization of variables
     signal = 1
+    keywords = ['NULL'] + keywords
+    dico_keywords = {i:0 for i in keywords}
+    
     #Opens the document outputed from link_retriever.py
-    F = open('Results.txt', 'r')
+    F = open('DOI_trash.txt', 'r', encoding='utf-8')
+    
     #Opens output file
-    Searched_material = open('Searched_material.txt', 'w')
+    Searched_material = open('Searched_material.txt', 'w', encoding='utf-8')
     count_bad_links = 0
-    line = ''
     number = 0
-    count = 0
     
     #loop through each lines of the file with a link in each
-    for i in F.readlines():
-        doc = open('document.txt', 'w+')  
-        
+    for i in F.readlines():        
         #process the line to obtain a viable DOI
         i = i.strip('\n')
         i = i.split('\t')
         
         #indicates progression of the program
-        print(signal, (signal/1000)*100)
+        print(signal, (signal/limite)*100)
         signal+=1
+        
+        #rebuild the link to the full article
         link = 'https://doi.org/' + i[0]
         date = i[1]
         
         #retrieve data through the DOI. If an error occurs, we switch to the next article
         try :
-            retrieved_data = req.get('https://doi.org/' + i[0])
+            retrieved_data = req.get(link)
             my_raw_data = retrieved_data.content
         except:
             count_bad_links +=1
-            print('1 bad links =', count_bad_links)
             continue
         
+        output = ''
         #if the DOI redirect toward a PDF, the text is extracted from it in this code
         if b'%PDF' in my_raw_data:
             data = BytesIO(my_raw_data)
@@ -49,35 +51,49 @@ def sci(url, keywords, pure_url, coefficient, sci_url, ru_url, limite):
                 for page in range(len(read_pdf.pages)):
                     txt = read_pdf.pages[page].extract_text()
                     txt = txt.encode('UTF-8', errors = 'ignore')
-                    txt = txt.strip()
-                    doc.write(str(txt))
-                doc.close()
-                
+                    output = str(txt.strip())                
             except:
                 pass
-                    
-        else:
-            print('else')
-            doc.write(str(my_raw_data))
-            doc.close()
-                
-        M = open('document.txt', 'r')
         
-        #write the link in the output document if the conditions are fullfilled : if it is exactly the desired material.        
-        for line in M.readlines():
-            line = line.lower()
-            if keywords[0].lower() in line:
-                Searched_material +=1
-                Searched_material.write(link + '\t' + date + '\n')
+        #filter the CSS and html beacons out of the file             
+        else:
+            db_txt = soup(my_raw_data, "html.parser")
+            txt = db_txt.find_all(string = True)
+            blacklist = [
+                '[document]',
+                'noscript',
+                'header',
+                'html',
+                'meta',
+                'head', 
+                'input',
+                'script',
+                'footer',
+                'style',
+                ]
 
-        print('illu =', Searched_material)
-    
+            for t in txt:
+                if t.parent.name not in blacklist:
+                    output += '{}'.format(t)
+                    
+            output = re.sub("\n|\r|\rn", '', output) 
+            output = output[output.find('Abstract'):]
+            output = str(output[:output.find('References')])            
+                        
+        #write the link in the output document if the conditions are fullfilled : if it is exactly the desired material.        
+        dico = {keywords[i]:output.count(keywords[i]) for i in range(0, len(keywords))}
+        dico_keywords[max(dico, key=dico.get)] += 1
+        Searched_material.write(link + '\t' + date + '\t' + str(max(dico, key=dico.get)) + '\n')
+        dico = {}
+                
+    for i in dico_keywords:
+        print(i, str(dico_keywords[i]))
+
     #Summarize the results in the console to give a preview of the results
-    print('not PDF', count) 
     print('Corresponding articles found :', number)
     print('impossible links to retrieve :', count_bad_links)
     
-    print('Searched_material :', Searched_material)
+    return 'Done'
 
     return 'Done'
     
