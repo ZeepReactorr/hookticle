@@ -92,9 +92,7 @@ def sci(keywords, limite):
     #Summarize the results in the console to give a preview of the results
     print('Corresponding articles found :', number)
     print('impossible links to retrieve :', count_bad_links)
-    
-    return 'Done'
 
-    return 'Done'
+    return True
     
-print(sci('https://pubmed.ncbi.nlm.nih.gov/?term=eukaryote+sequencing&filter=years.2014-2023&sort=date', ['Searched_material', 'Nanopore', 'PacBio'], 'https://pubmed.ncbi.nlm.nih.gov/', [1], 'https://sci-hub.ru/', 'https://moscow.sci-hub.ru/', 1000))
+print(sci(['materia_1', 'material_2', 'material_3'], 1000))
