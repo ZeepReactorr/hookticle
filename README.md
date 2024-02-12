@@ -11,6 +11,8 @@ Finsubject aims to provide a comprehensive view of a field of research based on 
 
 The first draft of a pipeline for _de novo_ transcriptome assembly. Currently the Read to Read Overlap Finding step fails, and I am working on a fix. The pipeline is written in bash. Also working on finding a cool name.
 
+> All those programs were realized in the context of an internship realized between september 2023 and June 2024 at the *Muséum National d'Histoire Naturelle*. Below can be found the abstract of the internship report.
+
 ## **Abstract : A study on how to adapt nanopore sequencingto strictly heterotrophic dinoflagellates.**
 
 Dinoflagellates are a diverse, ubiquitous order of unicellular eukaryotes and have been
