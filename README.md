@@ -46,5 +46,13 @@ the internship during the next semester to pursue this endeavour. <br>
 Keywords : Dinoflagellates, Nanopore sequencing, molecular biology,
 bioinformatics, Transcriptomic.
 
+## Citation
+
+If you are to use and find helpful any of the tools available here, kindly cite as follow :
+Bettiati M. A study on how to adapt nanopore sequencingto strictly heterotrophic dinoflagellates. (2024). https://github.com/ZeepReactorr/hookticle/
+
+
+
+
 
 
