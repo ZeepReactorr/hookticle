@@ -7,6 +7,22 @@ The development is still ongoing and currently limited to the PubMed database of
 
 Finsubject aims to provide a comprehensive view of a field of research based on the researcher's own standards. It relies on Logistic Regression to do so. Currently the program has only been tested and verified on classifying research articles about sequencing depending on whether they were working on Metagenomic samples or Culture samples. The development to generalize the model is ongoing and currently limited to the Pubmed database of research articles. Also written in Python, scripts are available to verify the results of the script.
 
+### Installation
+
+*Coming soon*
+
+### Usage
+
+First the links to the articles need to be collected. To do so, run the following command line in your terminal : 
+
+```python .\link_retriever.py 'URL' ```
+
+The program will update the progression in your console. Once it is done running, run the following command in your terminal :
+
+```python .\article_sorter.py keyword_1 keyword_2 ... keyword_n```
+
+Again the progression will be updated in your console and a summary of the primary results will be available once the program has finished running.
+
 ## pipeline_2
 
 The first draft of a pipeline for _de novo_ transcriptome assembly. Currently the Read to Read Overlap Finding step fails, and I am working on a fix. The pipeline is written in bash. Also working on finding a cool name.
