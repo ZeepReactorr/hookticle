@@ -3,10 +3,6 @@
 Exatool is written in python and is able to retrieve the full text of an article (when free). Its purpose is to allow a better understanding of the material used by the scientific community using a keyword research. Python scripts to visualize the data are also available.
 The development is still ongoing and currently limited to the PubMed database of research articles. 
 
-## Finsubject
-
-Finsubject aims to provide a comprehensive view of a field of research based on the researcher's own standards. It relies on Logistic Regression to do so. Currently the program has only been tested and verified on classifying research articles about sequencing depending on whether they were working on Metagenomic samples or Culture samples. The development to generalize the model is ongoing and currently limited to the Pubmed database of research articles. Also written in Python, scripts are available to verify the results of the script.
-
 ### Installation
 
 *Coming soon*
@@ -22,6 +18,18 @@ The program will update the progression in your console. Once it is done running
 ```python .\article_sorter.py keyword_1 keyword_2 ... keyword_n```
 
 Again the progression will be updated in your console and a summary of the primary results will be available once the program has finished running.
+
+## Finsubject
+
+Finsubject aims to provide a comprehensive view of a field of research based on the researcher's own standards. It relies on Logistic Regression to do so. Currently the program has only been tested and verified on classifying research articles about sequencing depending on whether they were working on Metagenomic samples or Culture samples. The development to generalize the model is ongoing and currently limited to the Pubmed database of research articles. Also written in Python, scripts are available to verify the results of the script.
+
+### Installation
+
+*Coming soon*
+
+### Usage
+
+
 
 ## pipeline_2
 
