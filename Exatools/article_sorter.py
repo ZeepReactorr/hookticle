@@ -104,11 +104,8 @@ def sci(keywords):
     print('Corresponding articles found :', number)
     print('impossible links to retrieve :', count_bad_links)
     
-    return 'Done'
+    return True
     
-#print(sci(['Illumina', 'Nanopore', 'PacBio']))
-
-
 if __name__ == "__main__":
     keywords = list(' '.join(sys.argv[1:]).split())
     sci(keywords)
