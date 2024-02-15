@@ -1,11 +1,13 @@
+import os
 import urllib.request as ul
 from bs4 import BeautifulSoup as soup
 import requests as req
 import re
-import os
+import sys
 
 #Change in the directory where you want the article's link stored
-os.chdir('C:\\PATH\\TO\\DIRECTORY')
+dir_path = os.path.dirname(os.path.realpath(__file__))
+os.chdir(dir_path)
 
 #function retrieving the articles on a single PubMed page. The standard PubMed webpage displays 10 articles
 def dl_intel(url, pure_url):
@@ -41,7 +43,7 @@ def dl_intel(url, pure_url):
         #Here we locate each element we need to retrieve and store it. Since some caracters used in the articles are not understood we explicitely encode them in UTF-8.
         locator_date = db_2.findAll('span', {'class':'cit'})
         try :
-            date = str(re.findall('\d{4}', str(locator_date))[0])
+            date = str(re.findall("\d{4}", str(locator_date))[0])
         except :
             continue
         
@@ -56,8 +58,6 @@ def dl_intel(url, pure_url):
     
     DOI_trash.close()
     return True
-
-#print(dl_intel('https://pubmed.ncbi.nlm.nih.gov/?term=mitochondria&page=1', 'https://pubmed.ncbi.nlm.nih.gov/'))
 
 #This function's sole purpose is to pass to the next page in PubMed. It is possible to set a limit to how many pages you want to collect the articles' link from.
 def switch_page(url, pure_url):
@@ -84,6 +84,10 @@ def switch_page(url, pure_url):
             Results.write(lines)
             
     K.close()
-    return True
+    return 'All Done !'
 
-#print(switch_page('https://pubmed.ncbi.nlm.nih.gov/?term=dinoflagellate+sequencing&filter=simsearch2.ffrft&filter=years.2010-2024&sort_order=asc', 'https://pubmed.ncbi.nlm.nih.gov/'))
+if __name__ == "__main__":
+    url = str(sys.argv[1])
+    pure_url = 'https://pubmed.ncbi.nlm.nih.gov/'
+    switch_page(url, pure_url)
+    

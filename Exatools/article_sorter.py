@@ -1,35 +1,46 @@
+from bs4 import BeautifulSoup as soup
 import requests as req
 import PyPDF2
 from io import BytesIO
 import os
+import re
+import sys
+import numpy as np
 
 #change into the desired directory to store the results of the sorting
-os.chdir('C:\\PATH\\TO\\DESIRED\\DIRECTORY')
+dir_path = os.path.dirname(os.path.realpath(__file__))
+os.chdir(dir_path)
 
-def sci(keywords, limite):
+def sci(keywords):    
     #initialization of variables
     signal = 1
     keywords = ['NULL'] + keywords
     dico_keywords = {i:0 for i in keywords}
     
     #Opens the document outputed from link_retriever.py
-    F = open('DOI_trash.txt', 'r', encoding='utf-8')
+    F = open('Results.txt', 'r', encoding='utf-8')
+    for count, line in enumerate(F):
+        pass
+    limite = count +1
+    F.close()
     
+    F = open('Results.txt', 'r', encoding='utf-8')
+
     #Opens output file
     Searched_material = open('Searched_material.txt', 'w', encoding='utf-8')
     count_bad_links = 0
     number = 0
     
     #loop through each lines of the file with a link in each
-    for i in F.readlines():        
+    for i in F.readlines(): 
         #process the line to obtain a viable DOI
         i = i.strip('\n')
         i = i.split('\t')
-        
+
         #indicates progression of the program
-        print(signal, (signal/limite)*100)
+        print('article n°' + str(signal) + '\t' + 'loading :' + str(np.round((signal/limite)*100)) + '%')
         signal+=1
-        
+                
         #rebuild the link to the full article
         link = 'https://doi.org/' + i[0]
         date = i[1]
@@ -92,7 +103,12 @@ def sci(keywords, limite):
     #Summarize the results in the console to give a preview of the results
     print('Corresponding articles found :', number)
     print('impossible links to retrieve :', count_bad_links)
-
-    return True
     
-print(sci(['material_1', 'material_2', 'material_3'], 1000))
+    return 'Done'
+    
+#print(sci(['Illumina', 'Nanopore', 'PacBio']))
+
+
+if __name__ == "__main__":
+    keywords = list(' '.join(sys.argv[1:]).split())
+    sci(keywords)
