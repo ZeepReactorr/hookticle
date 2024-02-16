@@ -36,7 +36,7 @@ def sci(keywords):
         i = i.split('\t')
 
         #indicates progression of the program
-        print('article n°' + str(signal) + '\t' + 'loading :' + str(np.round((signal/limite)*100)) + '%')
+        print('article' + str(signal) + '\t' + 'loading :' + str(np.round((signal/limite)*100)) + '%')
         signal+=1
                 
         #rebuild the link to the full article
