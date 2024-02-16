@@ -8,7 +8,6 @@ import sys
 import numpy as np
 from matplotlib import pyplot as plt
 import urllib.request as ul
-from bs4 import BeautifulSoup as soup
 
 def sci(keywords):    
     #initialization of variables
