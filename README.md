@@ -3,6 +3,18 @@
 Exatool is written in python and is able to retrieve the full text of an article (when free). Its purpose is to allow a better understanding of the material used by the scientific community using a keyword research. Python scripts to visualize the data are also available.
 The development is still ongoing and currently limited to the PubMed database of research articles. 
 
+### Prerequisite 
+
+To run the programs smoothly, you need to have installed the following packages : 
+- bs4
+- requests
+- PyPDF2
+- BytesIO
+- numpy
+- matplotlib
+
+All those packages can be installed with `pip install <package_name>` from the terminal
+
 ### Installation
 
 To install the Exatool package, run the following command line in your terminal :
