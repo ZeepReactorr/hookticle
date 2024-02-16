@@ -9,15 +9,12 @@ The development is still ongoing and currently limited to the PubMed database of
 
 ### Usage
 
-First the links to the articles need to be collected. To do so, run the following command line in your terminal : 
+To run the program, enter the following command line in your terminal, filling the gaps with the required parameters :
 
-```python .\link_retriever.py 'URL' ```
+`python ~/PATH/TO/exatool.py ~/PATH/TO/OUTPUT_DIR 'Pubmed URL' keyword_1 keyword_2... keyword_n date_range_start date_range_end`
 
-The program will update the progression in your console. Once it is done running, run the following command in your terminal :
-
-```python .\article_sorter.py keyword_1 keyword_2 ... keyword_n```
-
-Again the progression will be updated in your console and a summary of the primary results will be available once the program has finished running.
+The program will keep the progression updated in the console. The ouptut graphical plot will be saved in the output directory you indicated as well as the intermediary files. 
+**Be careful that the date range in your Pubmed query and indicated date range variable __match__, if they don't, the plot will not be correct.**
 
 ## Finsubject
 
