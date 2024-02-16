@@ -7,7 +7,7 @@ The development is still ongoing and currently limited to the PubMed database of
 
 To install the Exatool package, run the following command line in your terminal :
 
- `git clone https://github.com/ZeepReactorr/hexatools`
+ `git clone https://github.com/ZeepReactorr/exatools`
 
 ### Usage
 
