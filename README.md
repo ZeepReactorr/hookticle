@@ -5,7 +5,9 @@ The development is still ongoing and currently limited to the PubMed database of
 
 ### Installation
 
-*Coming soon*
+To install the Exatool package, run the following command line in your terminal :
+
+ `git clone https://github.com/ZeepReactorr/hexatools`
 
 ### Usage
 
