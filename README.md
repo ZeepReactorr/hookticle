@@ -31,6 +31,10 @@ The program will keep the progression updated in the console. The ouptut graphic
 **Be careful that the date range in your Pubmed query and indicated date range variable __match__, if they don't, the plot will not be correct.** <br>
 **Make sure that there the URL is between quotes, as the command will return an error otherwise.**
 
+Example of prompt : 
+
+ python ~/PATH/TO/exatool.py ~/PATH/TO/OUTPUT/DIRECTORY 'https://pubmed.ncbi.nlm.nih.gov/?term=comparison+nanopore+illumina+sequencing&filter=simsearch2.ffrft' Illumina Nanopore 2010 2024
+
 ## Finsubject
 
 Finsubject aims to provide a comprehensive view of a field of research based on the researcher's own standards. It relies on Logistic Regression to do so. Currently the program has only been tested and verified on classifying research articles about sequencing depending on whether they were working on Metagenomic samples or Culture samples. The development to generalize the model is ongoing and currently limited to the Pubmed database of research articles. Also written in Python, scripts are available to verify the results of the script.
