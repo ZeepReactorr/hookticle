@@ -193,7 +193,7 @@ def switch_page(url, pure_url):
     Results = open('Results.txt', 'w')
     
     while count <= limite :
-        print(dl_intel(link, pure_url), 'Progression :', (count/limite)*100)
+        print(dl_intel(link, pure_url), 'Progression :', np.round((count/limite)*100))
         link = url + '&page=' + str(count)
         count+=1
         K = open('DOI_trash.txt', 'r')
