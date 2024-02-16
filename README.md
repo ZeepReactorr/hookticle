@@ -17,7 +17,7 @@ All those packages can be installed with `pip install <package_name>` from the t
 
 ### Installation
 
-To install the Exatool package, run the following command line in your terminal :
+To install the Exatool program, run the following command line in your terminal :
 
  `git clone https://github.com/ZeepReactorr/exatools`
 
