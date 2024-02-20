@@ -3,6 +3,14 @@
 Exatool is written in python and is able to retrieve the full text of an article (when free). Its purpose is to allow a better understanding of the material used by the scientific community using a keyword research. Python scripts to visualize the data are also available.
 The development is still ongoing and currently limited to the PubMed database of research articles. 
 
+## TO DO
+
+- implement subplots to plot multiple graphs
+- add date range detection (UX help)
+
+- Find a method that's 100% sure of detecting material
+- benchmark
+
 ### Prerequisite 
 
 To run the programs smoothly, you need to have installed the following packages : 
