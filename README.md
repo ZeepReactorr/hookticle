@@ -5,7 +5,11 @@ The development is still ongoing and currently limited to the PubMed database of
 
 **If you have questions, find bugs, or have ideas of features you would like to propose, do not hesitate to reach out at mattgitqna@gmail.com**
 
-If you do not enjoy using a terminal, fear not ! You can download a rudimentary graphic interface for exatool here : https://github.com/ZeepReactorr/exatools/releases/download/release_1.0/exatool_WINDOWS_1.0_setup.exe <br>
+If you know for sure your query will not be too long, a friendlier GUI is available here : https://exatools.streamlit.app/
+**This web-app is limited in terms of runtime : if you are searching more than 1000 articles I advise to use the terminal version. I am currently working on setting up a more efficient web-app.**
+
+If you wish to avoid the limitations of the web-app, but still need a GUI a rudimentary app can be downloaded here : https://github.com/ZeepReactorr/exatools/releases/download/release_1.0/exatool_WINDOWS_1.0_setup.exe <br>
+
 Be aware that it **will be slower** than if you used a terminal :).
 
 ## Prerequisite 
