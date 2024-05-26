@@ -83,16 +83,16 @@ Results plot : <br>
 ![image](https://github.com/ZeepReactorr/hookticle/assets/151944715/52f3a94c-6ede-4a46-bee4-557dad3ffb82)
 
 Number of article classified in each category at every iteration of the model : <br>
-![image](https://github.com/ZeepReactorr/hookticle/assets/151944715/124c9137-beb6-4834-938d-5f494222a380)
-
-
 ![image](https://github.com/ZeepReactorr/hookticle/assets/151944715/92c2098f-0c7d-4f0b-842e-3904b550c105)
 
-
+Numbre of articles in each category at each model iteration :
+![image](https://github.com/ZeepReactorr/hookticle/assets/151944715/124c9137-beb6-4834-938d-5f494222a380)
 
 # Credit
 
-If you found anny of these tool useful during your research, please cite :
+If you found anny of these tool useful during your research, please cite the corresponding model :
+
+BETTIATI M. (2024). Exatool [Python]. https://github.com/ZeepReactorr/hookticle (Original work published 2024)
 
 BETTIATI M. (2024). Finsubject [Python]. https://github.com/ZeepReactorr/hookticle (Original work published 2024)
 
