@@ -61,7 +61,7 @@ Sample results for the most used mapping tool in ONT bioinformatics between 2002
 
 # Finsubject
 
-Finsubject aims to provide a comprehensive view of a field of research based on the researcher's own standards. It relies on Logistic Regression and Natural Language Processing algorithms to do so. Currently the program has only been tested and verified on classifying research articles about sequencing depending on whether they were working on Metagenomic samples or Culture samples. The model has been generalized, and work is currently focused on generalizing it in order to make it efficient no matter the subject.
+Finsubject aims to provide a comprehensive view of a field of research based on the researcher's own standards. It relies on Logistic Regression and Natural Language Processing algorithms to do so. Currently the program has only been tested and verified on classifying research articles about sequencing depending on whether they were working on Metagenomic samples or Culture samples. The model has been generalized, and work is currently focused on generalizing it in order to make it efficient no matter the subject. Afterward the model will be made fully available and user friendly.
 
 ### Installation
 
