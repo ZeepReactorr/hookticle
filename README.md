@@ -80,13 +80,13 @@ Finsubject action is divided in 4 steps
 In addition to the usual metric scores of Machine Learning (accuracy score, F1, Confusion matrix), Finsubject will provide a detailed report on the query with the following graph.
 
 Results plot : <br>
-![image](https://github.com/ZeepReactorr/hookticle/assets/151944715/52f3a94c-6ede-4a46-bee4-557dad3ffb82)
+![image](https://github.com/ZeepReactorr/hookticle/assets/151944715/6c60fc99-b0d5-4961-b0f3-49e7953fb346) <br>
 
 Number of article classified in each category at every iteration of the model : <br>
-![image](https://github.com/ZeepReactorr/hookticle/assets/151944715/92c2098f-0c7d-4f0b-842e-3904b550c105)
+![image](https://github.com/ZeepReactorr/hookticle/assets/151944715/92c2098f-0c7d-4f0b-842e-3904b550c105) <br>
 
 Numbre of articles in each category at each model iteration : <br>
-![image](https://github.com/ZeepReactorr/hookticle/assets/151944715/124c9137-beb6-4834-938d-5f494222a380)
+![image](https://github.com/ZeepReactorr/hookticle/assets/151944715/124c9137-beb6-4834-938d-5f494222a380) <br>
 
 # Credit
 
