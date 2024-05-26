@@ -85,7 +85,7 @@ Results plot : <br>
 Number of article classified in each category at every iteration of the model : <br>
 ![image](https://github.com/ZeepReactorr/hookticle/assets/151944715/92c2098f-0c7d-4f0b-842e-3904b550c105)
 
-Numbre of articles in each category at each model iteration :
+Numbre of articles in each category at each model iteration : <br>
 ![image](https://github.com/ZeepReactorr/hookticle/assets/151944715/124c9137-beb6-4834-938d-5f494222a380)
 
 # Credit
