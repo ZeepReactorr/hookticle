@@ -61,19 +61,40 @@ Sample results for the most used mapping tool in ONT bioinformatics between 2002
 
 # Finsubject
 
-Finsubject aims to provide a comprehensive view of a field of research based on the researcher's own standards. It relies on Logistic Regression to do so. Currently the program has only been tested and verified on classifying research articles about sequencing depending on whether they were working on Metagenomic samples or Culture samples. The development to generalize the model is ongoing and currently limited to the Pubmed database of research articles. Also written in Python, scripts are available to verify the results of the script.
+Finsubject aims to provide a comprehensive view of a field of research based on the researcher's own standards. It relies on Logistic Regression and Natural Language Processing algorithms to do so. Currently the program has only been tested and verified on classifying research articles about sequencing depending on whether they were working on Metagenomic samples or Culture samples. The model has been generalized, and work is currently focused on generalizing it in order to make it efficient no matter the subject.
 
 ### Installation
 
-*Coming soon*
+Coming soon.
 
 ### Usage
+
+Finsubject action is divided in 4 steps
+- Field definition 
+- Model training
+- Testing set definition
+- Classification of the Testing set
+
+### Metrics
+
+In addition to the usual metric scores of Machine Learning (accuracy score, F1, Confusion matrix), Finsubject will provide a detailed report on the query with the following graph.
+
+Results plot :
+![image](https://github.com/ZeepReactorr/hookticle/assets/151944715/52f3a94c-6ede-4a46-bee4-557dad3ffb82)
+
+Number of article classified in each category at every iteration of the model :
+![image](https://github.com/ZeepReactorr/hookticle/assets/151944715/124c9137-beb6-4834-938d-5f494222a380)
+
+
+![image](https://github.com/ZeepReactorr/hookticle/assets/151944715/92c2098f-0c7d-4f0b-842e-3904b550c105)
+
+
 
 # Credit
 
 If you found anny of these tool useful during your research, please cite :
 
-BETTIATI M. (2024). Exatools [Python]. https://github.com/ZeepReactorr/exatools (Original work published 2024)
+BETTIATI M. (2024). Finsubject [Python]. https://github.com/ZeepReactorr/hookticle (Original work published 2024)
 
 
 
